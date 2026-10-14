@@ -1,0 +1,5 @@
+sentinel_readings.csv
+sentinel_alerts.csv
+__pycache__/
+.DS_Store
+
