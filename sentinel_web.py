@@ -1,4 +1,4 @@
-
+import os
 import csv
 import json
 from pathlib import Path
@@ -9,8 +9,8 @@ import threading
 BASE_DIR = Path(__file__).resolve().parent
 READINGS_FILE = BASE_DIR / "sentinel_readings.csv"
 ALERTS_FILE = BASE_DIR / "sentinel_alerts.csv"
-HOST = "127.0.0.1"
-PORT = 8765
+HOST = "0.0.0.0"
+PORT = int(os.environ.get("PORT", 8765))
 
 PAGE = r"""<!DOCTYPE html>
 <html lang="en">
