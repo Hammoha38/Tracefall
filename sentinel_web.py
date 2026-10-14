@@ -77,6 +77,8 @@ th { color: #64748b; background: #f8fafc; }
 td.message { min-width: 220px; }
 tr.alert-row { cursor: pointer; }
 tr.alert-row:hover { background: #f8fafc; }
+tr.alert-row:has(.pill.critical) { background: #fef2f2; }
+tr.alert-row:has(.pill.warning) { background: #fffbeb; }
 .hidden { display: none; }
 #details { white-space: pre-wrap; line-height: 1.6; }
 .chart-grid {
