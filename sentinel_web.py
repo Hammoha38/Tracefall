@@ -77,8 +77,9 @@ th { color: #64748b; background: #f8fafc; }
 td.message { min-width: 220px; }
 tr.alert-row { cursor: pointer; }
 tr.alert-row:hover { background: #f8fafc; }
-tr.alert-row:has(.pill.critical) { background: #fef2f2; }
-tr.alert-row:has(.pill.warning) { background: #fffbeb; }
+tr.alert-row:has(.pill.critical) { background: #fef2f2; border-left: 5px solid #dc2626; }
+tr.alert-row:has(.pill.warning) { background: #fffbeb; border-left: 5px solid #d97706; }
+tr.alert-row td:first-child { border-left: 5px solid transparent; }
 .hidden { display: none; }
 #details { white-space: pre-wrap; line-height: 1.6; }
 .chart-grid {
