@@ -82,6 +82,18 @@ tr.alert-row:has(.pill.warning) { background: #fffbeb; border-left: 5px solid #d
 tr.alert-row td:first-child { border-left: 5px solid transparent; }
 .hidden { display: none; }
 #details { white-space: pre-wrap; line-height: 1.6; }
+.alert-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .alert-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .chart-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -207,7 +219,7 @@ tr.alert-row td:first-child { border-left: 5px solid transparent; }
         <div id="shownCount" class="value">0</div>
       </div>
     </div>
-
+    <div class="alert-layout">
     <div class="panel">
       <h2>Alert History Log</h2>
       <p class="note">Only warnings, spikes, trends, and critical alerts are listed here. Normal readings remain saved in the readings file.</p>
@@ -232,10 +244,11 @@ tr.alert-row td:first-child { border-left: 5px solid transparent; }
       </div>
     </div>
 
-    <div class="panel">
+        <div class="panel">
       <h3>Selected Alert Details</h3>
       <div id="details">Select an alert above to see its sensor readings.</div>
     </div>
+  </div>
   </section>
 </main>
 
